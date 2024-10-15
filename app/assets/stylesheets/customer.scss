@@ -1,20 +1,8 @@
-.customer-card {
+.card {
   border: 1px solid #ddd;
   border-radius: 8px;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-  overflow: hidden;
-
-  .card-img-top {
-    height: 180px;
-    object-fit: cover;
-  }
-
-  .card-body {
-    padding: 20px;
-  }
-
-  .card-title {
-    font-size: 1.25rem;
-    margin-bottom: 0.75rem;
-  }
+}
+.card-content {
+  text-align: center;
 }

@@ -1,0 +1,14 @@
+<h1 class="title">Alphabetized Customers</h1>
+
+<div class="columns is-multiline">
+  <% @alphabetized_customers.each do |customer| %>
+    <div class="column is-one-quarter">
+      <%= render 'customer', customer: customer %>
+    </div>
+  <% end %>
+</div>
+
+<div class="navigation-links">
+  <%= link_to "View All Customers", root_path %> |
+  <%= link_to "View Customers Missing Email", missing_email_customers_path %>
+</div>
