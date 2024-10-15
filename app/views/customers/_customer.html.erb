@@ -1,7 +1,15 @@
-<div class="customer">
-  <%= image_tag customer.image, alt: "#{customer.full_name}'s photo" uf customer.image.attached? %>
-<h2><%= customer.full_name %></h2>
-<p>Phone: <%= customer.phone_number %></p>
-<p>Email: <%= customer.email_address.presence || 'N/A' %></p>
-<p>Notes: <%= customer.notes %></p>
+<div class="card customer-card">
+  <div class="card-image">
+    <% if customer.image.attached? %>
+      <%= image_tag customer.image, class: "card-img-top" %>
+    <% else %>
+      <%= image_tag "placeholder.jpg", class: "card-img-top" %>
+    <% end %>
+  </div>
+  <div class="card-content">
+    <h5 class="card-title"><%= customer.full_name %></h5>
+    <p><strong>Phone:</strong> <%= customer.phone_number %></p>
+    <p><strong>Email:</strong> <%= customer.email || 'N/A' %></p>
+    <p><strong>Notes:</strong> <%= customer.notes %></p>
+  </div>
 </div>
