@@ -1,0 +1,7 @@
+<div class="customer">
+  <%= image_tag customer.image, alt: "#{customer.full_name}'s photo" uf customer.image.attached? %>
+<h2><%= customer.full_name %></h2>
+<p>Phone: <%= customer.phone_number %></p>
+<p>Email: <%= customer.email_address.presence || 'N/A' %></p>
+<p>Notes: <%= customer.notes %></p>
+</div>
